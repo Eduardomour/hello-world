@@ -1,17 +1,11 @@
 function adicionarTarefa() {
   const input = document.getElementById("tarefaInput");
-  const texto = input.value;
-
-  if (texto === "") return;
-
   const lista = document.getElementById("lista");
 
-  const item = document.createElement("li");
-  item.textContent = texto;
+  if (!input.value) return;
 
-  item.onclick = function () {
-    item.style.textDecoration = "line-through";
-  };
+  const item = document.createElement("li");
+  item.textContent = input.value;
 
   lista.appendChild(item);
 
