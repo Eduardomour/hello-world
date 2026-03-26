@@ -1,13 +1,14 @@
-function adicionarTarefa() {
-  const input = document.getElementById("tarefaInput");
-  const lista = document.getElementById("lista");
+function login() {
+  const user = document.getElementById("usuario").value;
+  const pass = document.getElementById("senha").value;
 
-  if (!input.value) return;
+  const erro = document.getElementById("erro");
 
-  const item = document.createElement("li");
-  item.textContent = input.value;
-
-  lista.appendChild(item);
-
-  input.value = "";
+  // usuário fake (simulação)
+  if (user === "admin" && pass === "1234") {
+    localStorage.setItem("logado", "true");
+    window.location.href = "home.html";
+  } else {
+    erro.textContent = "Usuário ou senha inválidos!";
+  }
 }

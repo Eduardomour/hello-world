@@ -1,12 +1,18 @@
 body {
   font-family: Arial;
+  background: #111;
+  color: white;
   text-align: center;
-  background: #f4f4f4;
+}
+
+.login-box {
+  margin-top: 100px;
 }
 
 input {
+  display: block;
+  margin: 10px auto;
   padding: 10px;
-  width: 200px;
 }
 
 button {
@@ -14,7 +20,6 @@ button {
   cursor: pointer;
 }
 
-li {
-  margin: 10px;
-  list-style: none;
+#erro {
+  color: red;
 }
